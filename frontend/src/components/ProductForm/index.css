@@ -1,0 +1,47 @@
+.product-form {
+  max-width: 760px;
+  padding: 24px;
+}
+
+.product-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.product-form-deal {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-form-deal input {
+  margin-top: 3px;
+  accent-color: var(--brand);
+}
+
+.product-form-preview img {
+  width: 110px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.product-form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 560px) {
+  .product-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

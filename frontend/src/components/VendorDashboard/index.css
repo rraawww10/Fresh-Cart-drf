@@ -1,0 +1,196 @@
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.dashboard-card {
+  padding: 18px 20px;
+}
+
+.dashboard-card-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.dashboard-card-value {
+  display: block;
+  margin-top: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.dashboard-awaiting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  background: linear-gradient(120deg, var(--placed-bg), var(--surface) 70%);
+  font-size: 15px;
+}
+
+.dashboard-awaiting-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.dashboard-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dashboard-panel {
+  padding: 20px;
+}
+
+.dashboard-panel-title {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* ------------------------------------------------------------ seven bars */
+
+.dashboard-chart {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  align-items: end;
+  height: 180px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-bar-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 6px;
+}
+
+.dashboard-bar-value {
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.dashboard-bar {
+  width: 100%;
+  min-height: 3px;
+  background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+  border-radius: 4px 4px 0 0;
+}
+
+.dashboard-bar-label {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------- status bars */
+
+.dashboard-status {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-status li {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dashboard-status-track {
+  height: 8px;
+  background-color: var(--surface-soft);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dashboard-status-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.fill-placed {
+  background-color: var(--placed);
+}
+
+.fill-shipped {
+  background-color: var(--shipped);
+}
+
+.fill-delivered {
+  background-color: var(--delivered);
+}
+
+.fill-cancelled {
+  background-color: var(--cancelled);
+}
+
+.dashboard-status-count {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------- top products */
+
+.dashboard-top {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-top li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.dashboard-top li:last-child {
+  border-bottom: none;
+}
+
+.dashboard-top-title {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .dashboard-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-bar-value {
+    display: none;
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+build
+dist
+
+# The address of the server lives here, and it is never committed.
+.env
+.env.local

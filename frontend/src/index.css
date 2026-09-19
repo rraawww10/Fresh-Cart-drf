@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #f6faf6;
+  --surface: #ffffff;
+  --surface-soft: #eef4ee;
+  --border: #dde7de;
+  --ink: #13231a;
+  --muted: #64796c;
+  --brand: #15803d;
+  --brand-dark: #14602f;
+  --brand-soft: #dcfce7;
+  --accent: #ea580c;
+  --accent-soft: #fff1e7;
+
+  --placed: #b45309;
+  --placed-bg: #fef3c7;
+  --shipped: #1d4ed8;
+  --shipped-bg: #dbeafe;
+  --delivered: #15803d;
+  --delivered-bg: #dcfce7;
+  --cancelled: #b91c1c;
+  --cancelled-bg: #fee2e2;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(19, 35, 26, 0.05), 0 8px 24px rgba(19, 35, 26, 0.07);
+  --shadow-sm: 0 1px 3px rgba(19, 35, 26, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------ layout */
+
+.page {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 28px 16px 64px;
+}
+
+.page-title {
+  font-size: 26px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ------------------------------------------------------------------ inputs */
+
+.field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+/* ----------------------------------------------------------------- buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--brand);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--brand-dark);
+}
+
+.btn-secondary {
+  background-color: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.btn-danger {
+  background-color: var(--surface);
+  border-color: var(--cancelled-bg);
+  color: var(--cancelled);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--cancelled-bg);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------- feedback */
+
+.status-msg {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cancelled);
+}
+
+.centered-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 320px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.centered-state h2 {
+  color: var(--ink);
+}
+
+/* Four status words, one colour each, on every screen in the app. */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-placed {
+  color: var(--placed);
+  background-color: var(--placed-bg);
+}
+
+.badge-shipped {
+  color: var(--shipped);
+  background-color: var(--shipped-bg);
+}
+
+.badge-delivered {
+  color: var(--delivered);
+  background-color: var(--delivered-bg);
+}
+
+.badge-cancelled {
+  color: var(--cancelled);
+  background-color: var(--cancelled-bg);
+}
+
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: var(--delivered-bg);
+  color: var(--delivered);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.price {
+  font-weight: 700;
+}
+
+/* The old price, always shown with a line through it. Nothing is worked out
+   from it — it is there to be read. */
+.mrp {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.unit-chip {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background-color: var(--surface-soft);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------- paginator */
+
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.paginator-label {
+  font-size: 13px;
+  color: var(--muted);
+}

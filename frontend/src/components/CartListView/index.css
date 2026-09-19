@@ -1,0 +1,9 @@
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}

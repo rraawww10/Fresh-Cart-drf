@@ -1,0 +1,2 @@
+/* ProtectedRoute draws nothing of its own: it either lets the screen through
+   or sends the person to /login. */

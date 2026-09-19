@@ -1,0 +1,42 @@
+.products-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.products-header-title {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.products-header-count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.products-header-sort {
+  min-width: 200px;
+  margin: 0;
+}
+
+.products-header-select-wrap {
+  position: relative;
+}
+
+.products-header-select-wrap .select {
+  appearance: none;
+  padding-right: 34px;
+}
+
+.products-header-select-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--muted);
+}

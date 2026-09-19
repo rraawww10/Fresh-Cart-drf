@@ -1,0 +1,29 @@
+.register-types {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.register-type {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register-type.is-active {
+  border-color: var(--brand);
+  background-color: var(--brand-soft);
+  color: var(--brand-dark);
+}
+
+.register-type input {
+  accent-color: var(--brand);
+}

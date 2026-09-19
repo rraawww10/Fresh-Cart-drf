@@ -1,0 +1,146 @@
+.order-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  background: linear-gradient(120deg, var(--delivered-bg), var(--surface) 70%);
+}
+
+.order-banner-icon {
+  font-size: 30px;
+  color: var(--delivered);
+  flex-shrink: 0;
+}
+
+.order-banner-title {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.order-banner .badge {
+  margin-left: auto;
+}
+
+.order-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.order-items {
+  padding: 20px 24px;
+}
+
+.order-section-title {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.order-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.order-items li {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.order-items li:last-child {
+  border-bottom: none;
+}
+
+.order-items img {
+  width: 52px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-soft);
+}
+
+.order-item-title {
+  margin: 0 0 2px;
+  font-weight: 600;
+}
+
+.order-item-info p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.order-item-info .unit-chip {
+  margin-left: 4px;
+}
+
+.order-item-right {
+  text-align: right;
+}
+
+.order-item-right p {
+  margin: 0 0 6px;
+}
+
+.order-side {
+  display: grid;
+  gap: 16px;
+}
+
+.order-panel {
+  padding: 20px;
+}
+
+.order-slot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(120deg, var(--brand-soft), var(--surface) 70%);
+}
+
+.order-slot-icon {
+  font-size: 22px;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.order-slot .field-label {
+  margin-bottom: 2px;
+}
+
+.order-address {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.order-address strong {
+  color: var(--ink);
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.order-row-total {
+  margin: 8px 0 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@media (max-width: 880px) {
+  .order-layout {
+    grid-template-columns: 1fr;
+  }
+}

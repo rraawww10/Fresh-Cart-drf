@@ -1,0 +1,11 @@
+.empty-cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: var(--surface-soft);
+  border-radius: 50%;
+  font-size: 26px;
+  color: var(--muted);
+}

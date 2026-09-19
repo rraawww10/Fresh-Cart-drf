@@ -1,0 +1,128 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-img {
+  width: 64px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-soft);
+}
+
+.cart-item-title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.cart-item-title:hover {
+  color: var(--brand);
+}
+
+.cart-item-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.cart-item-unit-price {
+  margin: 2px 0 0;
+  font-size: 13px;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.cart-item-qty button {
+  display: flex;
+  padding: 7px 9px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.cart-item-qty button:hover {
+  background-color: var(--surface-soft);
+  color: var(--ink);
+}
+
+.cart-item-qty span {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cart-item-subtotal {
+  min-width: 80px;
+  text-align: right;
+}
+
+.cart-item-remove {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.cart-item-remove:hover {
+  background-color: var(--cancelled-bg);
+  color: var(--cancelled);
+}
+
+@media (max-width: 720px) {
+  .cart-item {
+    grid-template-columns: 56px minmax(0, 1fr);
+    grid-template-areas:
+      'img info'
+      'qty total'
+      'remove remove';
+  }
+
+  .cart-item > a:first-child {
+    grid-area: img;
+  }
+
+  .cart-item-info {
+    grid-area: info;
+  }
+
+  .cart-item-qty {
+    grid-area: qty;
+    justify-self: start;
+  }
+
+  .cart-item-subtotal {
+    grid-area: total;
+  }
+
+  .cart-item-remove {
+    grid-area: remove;
+    justify-self: start;
+    padding-left: 0;
+  }
+}

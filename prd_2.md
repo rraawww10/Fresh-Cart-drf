@@ -981,7 +981,7 @@ Follow these steps in order. Do not start a step until the check at the end of t
 
 1. Make the folder, the virtual environment, and install the five packages from section 3. Freeze them into `requirements.txt`.
 2. Start the Django project as `freshcart` and create five apps: `users`, `products`, `cart`, `orders`, `vendor`.
-3. In `settings.py`: add the apps, add `rest_framework`, `django_filters`, `corsheaders` and `rest_framework_simplejwt.token_blacklist`; put `CorsMiddleware` as high as possible in `MIDDLEWARE`; set `CORS_ALLOWED_ORIGINS` to `http://localhost:3000`; set `AUTH_USER_MODEL` to the users app's model; set the DRF defaults to `AllowAny`, JWT authentication, the page size of 5 and the django-filter backend. **Leave the CORS lines out if you are building the Session 1 starter, because adding them is the Session 1 exercise.**
+3. In `settings.py`: add the apps, add `rest_framework`, `django_filters`, `corsheaders` and `rest_framework_simplejwt.token_blacklist`; put `CorsMiddleware` as high as possible in `MIDDLEWARE`; set `CORS_ALLOWED_ORIGINS` to `http://localhost:3000`; set `AUTH_USER_MODEL` to the users app's model; set the DRF defaults to `AllowAny`, JWT authentication, the page size of 5 and the django-filter backend.
 4. Write the five sets of models from section 8, then `makemigrations` and `migrate`.
 5. Write `products/management/commands/seed_products.py` from section 7. Run it and confirm 54 products and 2 users exist.
 6. Write the serializers, views and urls for `users`, then test all three endpoints in Postman.
@@ -997,8 +997,3 @@ Follow these steps in order. Do not start a step until the check at the end of t
 13. Build the screens in this order, testing each one against a running backend before starting the next: Header, Login, Register, ProtectedRoute, Product list with filters and search, Deals strip, Product details, Cart, Checkout, My Orders, One order, My Products, Add and Edit Product, Vendor Orders, Dashboard, Not Found.
 14. Work through all 46 checks in section 14 and fix what fails.
 15. Read section 13 again and confirm that nothing on that list was tidied up along the way.
-
-**Producing the seven session starters**
-
-16. Build the finished project first, then work backwards. The starter for a session is the finished project with that session's work removed and everything after it removed too.
-17. For each starter, run the checkpoint of the session before it, and confirm the app runs and the screen for that session is visibly broken in the exact way the session describes.
